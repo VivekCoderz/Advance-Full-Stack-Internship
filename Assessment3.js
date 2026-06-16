@@ -1,9 +1,9 @@
 // 1. 
-// const student = {
-//     name : "Vivek",
-//     age : 21,
-//     city : "Panipat"
-// }
+const student = {
+    name : "Vivek",
+    age : 21,
+    city : "Panipat"
+}
 // console.log(student);
 
 // // 2. 
@@ -155,74 +155,12 @@
 // arr → Array.prototype → Object.prototype → null
 
 // 29.
-// const animal = {
-//     eat() {
-//         console.log("Animal eating...");
-//     }
-// };
+const animal = {
+    eat() {
+        console.log("Animal eating...");
+    }
+};
 
+const dog = Object.create(animal);
 
-// 30.
-// const dog = Object.create(animal);
-
-// dog.eat(); // Animal speaking...
-
-// 31.
-// dog.bark = function () {
-//     console.log("Barking...");
-// };
-
-// dog.bark();  
-
-// 32.
-// Eating
-
-// 33.
-// class Student{
-//     constructor(name,age){
-//         this.name = name
-//         this.age = age
-//     }
-// }
-
-// 34.
-// Student.prototype.greet = function () {
-//     console.log(`Hello ${this.name}`);
-// };
-
-// 35.
-// Student.prototype.isAdult = function () {
-//     return this.age >= 18;
-// };
-
-// 36.
-// const s1 = new Student("Vivek", 21);
-// const s2 = new Student("Tripti", 20);
-// const s3 = new Student("Lovely", 19);
-
-// console.log(s1);
-// console.log(s2);
-// console.log(s3);
-
-// 37.
-//  const animal = {
-//      eat() {
-//          console.log("Animal eating...");
-//     }
-// // };
-
-// 38.
-// class Dog extends Animal {
-// }
-
-// 39.
-
-// Dog.prototype.bark = function () {
-//         console.log(`${this.name} is barking`);
-// }
-
-// 40.
-// const d = new Dog();
-
-// d.eat();    Eating...
-// d.bark();   Barking...
+dog.eat(); // Animal speaking...
