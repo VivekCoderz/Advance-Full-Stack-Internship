@@ -1,0 +1,161 @@
+export default [
+  {
+    id: 1,
+    name: "iQOO Z10R 5G",
+    category: "Smartphone",
+    brand: "iQOO",
+    price: 22999,
+    oldPrice: 23999,
+    discount: "2%",
+    rating: 4.6,
+    reviews: 4656,
+    description: "Aquamarine, 8GB RAM, 128GB Storage, 32MP 4K Selfie Camera",
+    delivery: "Free Delivery",
+    deliveryDate: "Tuesday, 24 June",
+    imageURL: "https://tse4.mm.bing.net/th/id/OIP.XCW9IH7lLZnA1-5oS9EXKwAAAA"
+  },
+
+  {
+    id: 2,
+    name: "SWAGR 12 Pairs Sports Socks",
+    category: "Fashion",
+    brand: "SWAGR",
+    price: 172,
+    oldPrice: 1299,
+    discount: "87%",
+    rating: 4.5,
+    reviews: 6196,
+    description: "Sports socks pack with comfortable fitting",
+    delivery: "Free Delivery",
+    deliveryDate: "Tomorrow, 23 June",
+    imageURL: "https://m.media-amazon.com/images/I/81biKixsaDL._AC_UY1100_FMwebp_.jpg"
+  },
+
+  {
+    id: 3,
+    name: "Apple 2026 MacBook Air 13 inch",
+    category: "Laptop",
+    brand: "Apple",
+    price: 103000,
+    oldPrice: 149000,
+    discount: "8%",
+    rating: 4.6,
+    reviews: 36,
+    description: "MacBook Air with M5 chip, Apple Intelligence, 34.46 cm display",
+    delivery: "Free Delivery",
+    deliveryDate: "Thursday, 26 June",
+    imageURL: "https://th.bing.com/th/id/OIP._1FHSOPwSizgqonj4fl68QHaEK"
+  },
+
+  {
+    id: 4,
+    name: "Deewar Mein Ek Khidki Rehti Thi",
+    category: "Book",
+    brand: "Hindi Literature",
+    price: 190,
+    oldPrice: 299,
+    discount: "36%",
+    rating: 4.5,
+    reviews: 2762,
+    description: "Hindi novel paperback book",
+    delivery: "Free Delivery",
+    deliveryDate: "Wednesday, 25 June",
+    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7jJnF5I0ipvh25wsUeYEdd-JmWa7xNNEEmKC-EL4ICA&s=10'
+  },
+
+  {
+    id: 5,
+    name: "EooCoo Premium Keyboard Cover",
+    category: "Laptop Accessories",
+    brand: "EooCoo",
+    price: 299,
+    oldPrice: 454,
+    discount: "34%",
+    rating: 4.5,
+    reviews: 622,
+    description: "Premium keyboard cover compatible with laptops",
+    delivery: "Free Delivery",
+    deliveryDate: "Monday, 30 June",
+    imageURL: "https://m.media-amazon.com/images/I/71fNP177DBL.jpg"
+  },
+
+  {
+    id: 6,
+    name: "EooCoo Case Compatible for MacBook Air",
+    category: "Laptop Accessories",
+    brand: "EooCoo",
+    price: 799,
+    oldPrice: 1199,
+    discount: "33%",
+    rating: 4.4,
+    reviews: 9694,
+    description: "Transparent protective case for MacBook Air",
+    delivery: "Free Delivery",
+    deliveryDate: "Tuesday, 1 July",
+    imageURL: "https://m.media-amazon.com/images/I/61DYnsaiLSL.jpg"
+  },
+
+  {
+    id: 7,
+    name: "Dyazo 13.3 inch Laptop Sleeve",
+    category: "Laptop Accessories",
+    brand: "Dyazo",
+    price: 299,
+    oldPrice: 899,
+    discount: "67%",
+    rating: 4.5,
+    reviews: 23363,
+    description: "Grey laptop bag sleeve with protection",
+    delivery: "Free Delivery",
+    deliveryDate: "Wednesday, 2 July",
+    imageURL: "https://m.media-amazon.com/images/I/81s4wKEliIL.jpg"
+  },
+
+  {
+    id: 8,
+    name: "Apple iPhone 17e 256GB",
+    category: "Smartphone",
+    brand: "Apple",
+    price: 64000,
+    oldPrice: 69900,
+    discount: "8%",
+    rating: 4.6,
+    reviews: 53,
+    description: "6.1 inch Super Retina XDR Display, A19 Chip",
+    delivery: "Free Delivery",
+    deliveryDate: "Friday, 27 June",
+    imageURL: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-202603-black_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=WEw4Mm90aWNESFd6NGRURjZZeWczYmpqWk1KSDNrTSt2a0ZJNEFxNVkvVWd5Y05DeUNUQ3lEYnJSQlB0MXVkaURaaTcwUVU3amw5MU9ONEFNSnRaWWpBSHlqQStCOGVBOUJkSkVqU0hLTkJ6Qkp5MVR6ZU01YTZ3d2hUOCthQVRmbW94YnYxc1YvNXZ4emJGL0IxNFp3&traceId=1'
+  },
+
+  {
+    id: 9,
+    name: "Anandamath (Hindi)",
+    category: "Book",
+    brand: "Bankimchandra Chatterjee",
+    price: 129,
+    oldPrice: 149,
+    discount: "13%",
+    rating: 4.5,
+    reviews: 2448,
+    description: "Classic Hindi paperback novel",
+    delivery: "Free Delivery",
+    deliveryDate: "Tomorrow, 23 June",
+    imageURL: 'https://www.midlandbookshop.com/s/607fe93d7eafcac1f2c73ea4/6846d70762f020aa8e32fa48/71jks9qlvil__sy342_.jpg'
+  },
+
+  {
+    id: 10,
+    name: "c",
+    category: "Laptop Accessories",
+    brand: "EooCoo",
+    price: 999,
+    oldPrice: 1499,
+    discount: "33%",
+    rating: 4.4,
+    reviews: 5000,
+    description: "Laptop protection accessories combo",
+    delivery: "Free Delivery",
+    deliveryDate: "Thursday, 26 June",
+    imageURL: "https://m.media-amazon.com/images/I/917okhG1wLL.jpg"
+  }
+];

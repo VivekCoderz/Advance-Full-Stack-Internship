@@ -1,0 +1,20 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navButton a{
+  color: black;
+  text-decoration: none;
+}
+
+
+
+.navButton a:hover{
+  color: red;
+  text-decoration: none;
+}
+
+.SearchArea button:hover{
+  background-color: red;
+}
