@@ -12,7 +12,9 @@ export default [
     description: "Aquamarine, 8GB RAM, 128GB Storage, 32MP 4K Selfie Camera",
     delivery: "Free Delivery",
     deliveryDate: "Tuesday, 24 June",
-    imageURL: "https://tse4.mm.bing.net/th/id/OIP.XCW9IH7lLZnA1-5oS9EXKwAAAA"
+    imageURL: "https://tse4.mm.bing.net/th/id/OIP.XCW9IH7lLZnA1-5oS9EXKwAAAA",
+    stoke : 10,
+    quantity : 0
   },
 
   {
@@ -28,7 +30,10 @@ export default [
     description: "Sports socks pack with comfortable fitting",
     delivery: "Free Delivery",
     deliveryDate: "Tomorrow, 23 June",
-    imageURL: "https://m.media-amazon.com/images/I/81biKixsaDL._AC_UY1100_FMwebp_.jpg"
+    imageURL: "https://m.media-amazon.com/images/I/81biKixsaDL._AC_UY1100_FMwebp_.jpg",
+    stoke : 20,
+    quantity : 0
+
   },
 
   {
@@ -44,7 +49,9 @@ export default [
     description: "MacBook Air with M5 chip, Apple Intelligence, 34.46 cm display",
     delivery: "Free Delivery",
     deliveryDate: "Thursday, 26 June",
-    imageURL: "https://th.bing.com/th/id/OIP._1FHSOPwSizgqonj4fl68QHaEK"
+    imageURL: "https://th.bing.com/th/id/OIP._1FHSOPwSizgqonj4fl68QHaEK",
+    stoke : 17,
+    quantity : 0
   },
 
   {
@@ -60,7 +67,9 @@ export default [
     description: "Hindi novel paperback book",
     delivery: "Free Delivery",
     deliveryDate: "Wednesday, 25 June",
-    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7jJnF5I0ipvh25wsUeYEdd-JmWa7xNNEEmKC-EL4ICA&s=10'
+    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7jJnF5I0ipvh25wsUeYEdd-JmWa7xNNEEmKC-EL4ICA&s=10',
+    stoke : 18,
+    quantity : 0
   },
 
   {
@@ -76,7 +85,9 @@ export default [
     description: "Premium keyboard cover compatible with laptops",
     delivery: "Free Delivery",
     deliveryDate: "Monday, 30 June",
-    imageURL: "https://m.media-amazon.com/images/I/71fNP177DBL.jpg"
+    imageURL: "https://m.media-amazon.com/images/I/71fNP177DBL.jpg",
+    stoke : 15,
+    quantity : 0
   },
 
   {
@@ -92,7 +103,9 @@ export default [
     description: "Transparent protective case for MacBook Air",
     delivery: "Free Delivery",
     deliveryDate: "Tuesday, 1 July",
-    imageURL: "https://m.media-amazon.com/images/I/61DYnsaiLSL.jpg"
+    imageURL: "https://m.media-amazon.com/images/I/61DYnsaiLSL.jpg",
+    stoke : 13,
+    quantity : 0
   },
 
   {
@@ -108,7 +121,9 @@ export default [
     description: "Grey laptop bag sleeve with protection",
     delivery: "Free Delivery",
     deliveryDate: "Wednesday, 2 July",
-    imageURL: "https://m.media-amazon.com/images/I/81s4wKEliIL.jpg"
+    imageURL: "https://m.media-amazon.com/images/I/81s4wKEliIL.jpg",
+    stoke : 39,
+    quantity : 0
   },
 
   {
@@ -124,7 +139,9 @@ export default [
     description: "6.1 inch Super Retina XDR Display, A19 Chip",
     delivery: "Free Delivery",
     deliveryDate: "Friday, 27 June",
-    imageURL: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-202603-black_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=WEw4Mm90aWNESFd6NGRURjZZeWczYmpqWk1KSDNrTSt2a0ZJNEFxNVkvVWd5Y05DeUNUQ3lEYnJSQlB0MXVkaURaaTcwUVU3amw5MU9ONEFNSnRaWWpBSHlqQStCOGVBOUJkSkVqU0hLTkJ6Qkp5MVR6ZU01YTZ3d2hUOCthQVRmbW94YnYxc1YvNXZ4emJGL0IxNFp3&traceId=1'
+    imageURL: 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-202603-black_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=WEw4Mm90aWNESFd6NGRURjZZeWczYmpqWk1KSDNrTSt2a0ZJNEFxNVkvVWd5Y05DeUNUQ3lEYnJSQlB0MXVkaURaaTcwUVU3amw5MU9ONEFNSnRaWWpBSHlqQStCOGVBOUJkSkVqU0hLTkJ6Qkp5MVR6ZU01YTZ3d2hUOCthQVRmbW94YnYxc1YvNXZ4emJGL0IxNFp3&traceId=1',
+    stoke : 20,
+    quantity : 0
   },
 
   {
@@ -140,7 +157,9 @@ export default [
     description: "Classic Hindi paperback novel",
     delivery: "Free Delivery",
     deliveryDate: "Tomorrow, 23 June",
-    imageURL: 'https://www.midlandbookshop.com/s/607fe93d7eafcac1f2c73ea4/6846d70762f020aa8e32fa48/71jks9qlvil__sy342_.jpg'
+    imageURL: 'https://www.midlandbookshop.com/s/607fe93d7eafcac1f2c73ea4/6846d70762f020aa8e32fa48/71jks9qlvil__sy342_.jpg',
+    stoke : 34,
+    quantity : 0
   },
 
   {
@@ -156,6 +175,8 @@ export default [
     description: "Laptop protection accessories combo",
     delivery: "Free Delivery",
     deliveryDate: "Thursday, 26 June",
-    imageURL: "https://m.media-amazon.com/images/I/917okhG1wLL.jpg"
+    imageURL: "https://m.media-amazon.com/images/I/917okhG1wLL.jpg",
+    stoke : 21,
+    quantity : 0
   }
 ];

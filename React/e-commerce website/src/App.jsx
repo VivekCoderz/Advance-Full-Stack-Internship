@@ -1,98 +1,134 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import Card from './components/Card'
-import Navbar from './components/Navbar'
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
+import Card from "./components/Card";
+import Navbar from "./components/Navbar";
 
-import cardData from './data/cardData.js'
-import products from './data/products.js'
+import cardData from "./data/cardData.js";
+import products from "./data/products.js";
+
+import { useState } from "react";
+import IndiviualCard from "./components/IndiviualCard.jsx";
+import Cart from "./components/Cart.jsx";
+import ApiFetch from "./components/ApiFetch.jsx";
+import Form from "./components/Form.jsx";
+
 function App() {
-  return (
-    <div>
-      <Navbar/>
-      <hr />
-      <h1>All Products</h1>
-      <div style={{
-        margin : "0px 100px",
-        display : "flex",
-        flexWrap : 'wrap',
-        gap : '20px',
-        margin : "40px 0px",
-        justifyContent : "center",
-        alignItems : "center"
-      }}>
-        {
-          cardData.map((card)=><Card cards={card}/>)
+  const cartItems = []
+
+  const [quantity, setQuantity] = useState(0);
+  const [Products, setProducts] = useState(products);
+  const [cart, setCart] = useState([]);
+  const [showCart,setShowCart] = useState(false)
+
+  const addCart = (id)=>{
+    const update = Products.find((pr)=>pr.id==id)
+    let newarray = []
+    let found = false;
+    newarray = cart.map((e)=>{
+      if(id==e.id){
+        found = true;
+        if(e.quantity<e.stoke){
+          return {...e,quantity : e.quantity+1}
         }
-      </div>
+        return e
+      }
+      return e
+    })
+    if(!found) newarray = [...cart,update]
+    setCart(newarray)
+  }
 
-        <hr />
+  
 
-     <div style={{
-    margin: "40px 0px",
-    display: "flex",
-    gap: "20px",
-    overflowX: "auto",
-    flexWrap: "nowrap",
-    padding: "10px"
-}}>
+  const updateCardQantity = (id,op=1) => {
+    console.log(id)
+    const update = Products.map((pr)=>{
+      if(pr.id==id && pr.stoke>pr.quantity){
+        return {...pr,quantity : pr.quantity+op}
+      }
+      return pr
+    })
+    setProducts(update)
+  }
 
-{
- products.map((pro)=>(
-    <div 
-      key={pro.id}
+
+  return (
+    <div style={{}}>
+      <ApiFetch/>
+      <Navbar showCart={showCart} setShowCart={setShowCart} cart={cart}/>
+     {showCart && (
+        <div
+    style={{
+      height: "500px",
+      position: "absolute",
+      right: "20px",
+      top: "70px",
+      width: "320px",
+      backgroundColor: "white",
+      borderRadius: "15px",
+      boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
+      overflowY : "auto",
+      zIndex: 10,
+      padding: "20px",
+      border: "1px solid #ddd"
+    }}
+  >
+    <h2 style={{marginBottom:"20px"}}>
+      🛒 Your Cart
+    </h2>
+
+    <hr />
+
+     {cart.map((pr)=>{
+        return <Cart pr={pr} updateCardQantity={updateCardQantity}/>
+      })}
+
+
+    <div
       style={{
-        width:"180px",
-        flexShrink:0,
-        padding:"10px"
       }}
     >
+      <h3>Total: ₹499</h3>
 
-      <img 
-        src={pro.imageURL} 
-        alt="hello"
+      <button
         style={{
-          height:"200px",
           width:"100%",
-          objectFit:"cover",
-          borderRadius:"8px"
+          padding:"12px",
+          backgroundColor:"black",
+          color:"white",
+          border:"none",
+          borderRadius:"10px",
+          cursor:"pointer"
         }}
-      />
-
-      <p style={{color:"blue",margin:"0px",fontSize:"14px"}}>{pro.description}</p>
-      <p style={{color:"blue",margin:"0px",fontSize:"14px"}}>{pro.reviews}</p>
-      <span style={{color:"red",margin:"0px",fontSize:"16px"}}>-{pro.discount}</span>
-      <span style={{color:"black",margin:"0px",fontSize:"16px"}}> <sup>₹</sup>{pro.price}<sup>00</sup></span>
-      <p style={{color:"gray",margin:"0px",fontSize:"12px"}}>M.R.P: <span style={{textDecoration:"line-through",color:"gray",
-    fontSize:"14px"}}>₹{pro.oldPrice}</span></p>
-   <p style={{
-     margin:"5px 0",
-     fontSize:"14px"
-    }}>
-    <span style={{
-      color:"#00a650",
-      fontWeight:"bold",
-      paddingRight : "8px",
-    }}>
-      ✓prime  
-    </span>
-    
-    <span>
-       FREE Delivery
-    </span>
-  </p>
-      <p style={{color:"black",margin:"0px",fontSize:"14px",fontWeight:"700"}}>{pro.deliveryDate}</p>
-
-
+      >
+        Checkout
+      </button>
     </div>
- ))
+
+  </div>
+     )
+     
+     }
+
+       <div
+        style={{
+           width:"90%",
+ margin:"30px auto",
+ display:"grid",
+ gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+ gap:"25px"
+        }}
+      >
+        {Products.map((pro) => (
+          <IndiviualCard key={pro.id} pro={pro} increaseQuantity ={updateCardQantity} addCart={addCart}/>
+        ))}
+      </div>
+
+      <Form/>
+    </div>
+  );
 }
 
-</div>
-
-    </div>
-  )
-}
-
-export default App
+export default App;

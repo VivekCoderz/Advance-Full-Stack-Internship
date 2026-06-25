@@ -1,54 +1,128 @@
-function Navbar(){
-    return (
-        <div 
-        style={
-            {
-                display : "flex",
-                justifyContent : "space-between",
-                alignItems : "center",
-                // width : '100vw',
-                backgroundColor : "whitesmoke",
-                padding : "0px 20px",
-                // height : '40px'
-            }
-        }>
-            <h1 style={{
-                color : "blue"
-            }}>
-                L O G O
-            </h1>
-            
-            <div className="SearchArea">
-                <input style={{
-                    width : '500px',
-                    height : '30px',
-                    outline : "none",
-                    border : '2px solid black',
-                    borderRadius :  '20px',
-                    padding : '5px 10px',
-                    fontSize : '17px'
-                }} type="text"  placeholder="Search product"/>
-                <button style={{
-                    margin : "0px 20px",
-                    padding : "10px",
-                    borderRadius : "10px",
-                    backgroundColor : "blue",
-                    color : "white"
-                }}>Search</button>
-            </div>
-            
-            <div style={{
-                display : "flex",
-                gap : "20px",
-                fontSize : "17px"
+function Navbar({showCart, setShowCart, cart}) {
+  return (
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        background: "white",
+        padding: "12px 40px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+        position: "sticky",
+        top: 0,
+        zIndex: 100
+      }}
+    >
 
-            }} className="navButton">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-            </div>
-        </div>
-    )
+      {/* Logo */}
+      <div>
+        <h1
+          style={{
+            margin: 0,
+            color: "#2563eb",
+            fontSize: "30px",
+            fontWeight: "800",
+            cursor: "pointer"
+          }}
+        >
+          Shop<span style={{color:"#111"}}>X</span>
+        </h1>
+      </div>
+
+
+      {/* Search */}
+      <div
+        style={{
+          display:"flex",
+          alignItems:"center",
+          width:"45%"
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Search products..."
+          style={{
+            width:"100%",
+            height:"40px",
+            border:"1px solid #ccc",
+            borderRight:"none",
+            borderRadius:"25px 0 0 25px",
+            padding:"0 20px",
+            fontSize:"16px",
+            outline:"none"
+          }}
+        />
+
+        <button
+          style={{
+            height:"42px",
+            padding:"0 25px",
+            border:"none",
+            background:"#2563eb",
+            color:"white",
+            fontSize:"16px",
+            borderRadius:"0 25px 25px 0",
+            cursor:"pointer"
+          }}
+        >
+          Search
+        </button>
+      </div>
+
+
+      {/* Links */}
+      <div
+        style={{
+          display:"flex",
+          alignItems:"center",
+          gap:"25px",
+          fontSize:"16px",
+          fontWeight:"500"
+        }}
+      >
+
+        <a 
+          href=""
+          style={{
+            textDecoration:"none",
+            color:"#333"
+          }}
+        >
+          Home
+        </a>
+
+
+        <button
+          onClick={()=>setShowCart(!showCart)}
+          style={{
+            border:"none",
+            background:"#111827",
+            color:"white",
+            padding:"10px 18px",
+            borderRadius:"25px",
+            cursor:"pointer",
+            fontSize:"15px"
+          }}
+        >
+          🛒 Cart ({cart.length})
+        </button>
+
+
+        <a 
+          href=""
+          style={{
+            textDecoration:"none",
+            color:"#333"
+          }}
+        >
+          Contact
+        </a>
+
+
+      </div>
+
+    </nav>
+  )
 }
 
-export default Navbar
+export default Navbar;
