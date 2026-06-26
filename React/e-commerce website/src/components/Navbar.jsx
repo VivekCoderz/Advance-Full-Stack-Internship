@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Navbar({showCart, setShowCart, cart}) {
   return (
     <nav
@@ -81,15 +83,15 @@ function Navbar({showCart, setShowCart, cart}) {
         }}
       >
 
-        <a 
-          href=""
+        <Link
+          to="/home"
           style={{
             textDecoration:"none",
             color:"#333"
           }}
         >
           Home
-        </a>
+        </Link>
 
 
         <button
@@ -108,15 +110,15 @@ function Navbar({showCart, setShowCart, cart}) {
         </button>
 
 
-        <a 
-          href=""
+        <Link
+          to="/contact"
           style={{
             textDecoration:"none",
             color:"#333"
           }}
         >
           Contact
-        </a>
+        </Link>
 
 
       </div>
