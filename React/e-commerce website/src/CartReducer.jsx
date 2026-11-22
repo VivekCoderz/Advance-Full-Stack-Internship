@@ -34,13 +34,10 @@ export function cartreducer(state, action) {
           },
         ];
       }
-      const total = updatedCart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0,
-      );
       return {
+        ...state,
         cart: updatedCart,
-        total,
+        total: calculate(updatedCart, state.discount),
       };
     }
     case "Inrease_qty": {
@@ -66,10 +63,7 @@ export function cartreducer(state, action) {
       };
     }
     case "CLEAR_CART": {
-      return {
-        cart: [],
-        total: 0,
-      };
+      return initialState;
     }
 
     default:
