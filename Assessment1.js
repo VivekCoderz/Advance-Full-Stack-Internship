@@ -14,18 +14,18 @@ a = 30;
 {
     let b = 2;
 }
-console.log(b)   // ReferenceError: b is not defined
+// console.log(b)   // ReferenceError: b is not defined (commented out so the rest of the file runs)
 
 
 // 4. Write a program to swap two numbers using array destructuring.
 
-let a = 10;
-let b = 20;
+let x = 10;
+let y = 20;
 
-[a, b] = [b, a];
+[x, y] = [y, x];
 
-console.log("a =", a);
-console.log("b =", b);
+console.log("x =", x);
+console.log("y =", y);
 
 
 // 5. Create an arrow function that returns the cube of a number. 
@@ -42,11 +42,11 @@ check(4)
 
 // 7. Create an arrow function that finds the maximum of three numbers. 
 const maxValue = (a,b,c) => {
-    if(a>b && a>c) return a;
-    else if(b>c && b>a) return b;
+    if(a>=b && a>=c) return a;
+    else if(b>=c) return b;
     return c;
 }
-maxValue(2,3,5)
+maxValue(2,3,5); // semicolon needed: the next line starts with a template literal
 
 `
 8. Given an array: 
@@ -58,7 +58,7 @@ let [ist,sec,...rem] = arr
 
 // 9. Create a function that receives a user's name and age and returns: "Hello Ram, you 
 // are 25 years old." using template literals.
-const greeting(name,age){
+function greeting(name,age){
     return `Hello ${name}, you are ${age} years old.`
 }
 greeting("Vivek",21)
@@ -87,7 +87,7 @@ const {name ,age,course} = student
 console.log(name,age,course)
 
 // 12. Rename course to technology while destructuring.
-const {name ,age,course : technology} = student
+const {course : technology} = student
 console.log(technology);
 
 // 13. Create a function with a default parameter: createUser(name, role="Student")
@@ -99,10 +99,10 @@ createUser("Vivek")
 // 14. Create a calculator function where the operation defaults to "add". 
 
 function calculator(a,b,operation = "add"){
-    if(operation="add") return a+b;
-    else if(operation="sub") return a-b;
-    else if(operation="mult") return a*b;
-    else if(operation="div") return a/b;
+    if(operation==="add") return a+b;
+    else if(operation==="sub") return a-b;
+    else if(operation==="mult") return a*b;
+    else if(operation==="div") return a/b;
 }
 
 calculator(2,3)
@@ -128,11 +128,14 @@ const backend = ["Node", "Express"];
 const result = [...frontend,...backend]
 
 
+{ // own block so names can be reused in each question
 // 18. Copy an array using the Spread Operator and add one extra value. 
 
 const arr1 = [23,23,23,2,3]
 const result = [...arr1,2]
+}
 
+{ // own block so names can be reused in each question
 // 19. Copy an object and update only the email property. 
 
 const student = { 
@@ -146,8 +149,10 @@ const updateObj = {
     ...student,
     email : "vivekgarg@gmail.com"
 }
-console.log(student.email)
+console.log(updateObj.email)
+}
 
+{ // own block so names can be reused in each question
 // 20. Create a product object and create a new object with an added discount field using 
 // the Spread Operator.
 
@@ -163,7 +168,9 @@ const updateObj = {
     discount : 232
 }
 console.log(updateObj.discount)
+}
 
+{ // own block so names can be reused in each question
 `21. Use map() and an arrow function to return only names from the given array: 
 JavaScript
 const users = [ 
@@ -183,7 +190,9 @@ const fnx = (arr) => {
     return arr.map((ele)=>ele.name)
 }
 console.log(fnx(users))
+}
 
+{ // own block so names can be reused in each question
 // 22. Use filter() to get users whose age is greater than 24. 
 const users = [ 
 { name: "Ram", age: 25 }, 
@@ -195,7 +204,9 @@ const fnx = (arr) => {
     return arr.filter((ele)=>ele.age>24)
 }
 console.log(fnx(users))
+}
 
+{ // own block so names can be reused in each question
 // 23. Use reduce() to calculate the total age of all users. 
 const users = [ 
 { name: "Ram", age: 25 }, 
@@ -207,16 +218,20 @@ const fnx = (arr) => {
     return arr.reduce((acc,ele)=>acc+ele.age,0)
 }
 console.log(fnx(users))
+}
 
+{ // own block so names can be reused in each question
 // 24. Create a function createInvoice(customerName, amount) and return a formatted 
 // string using template literals. 
 
 function createInvoice(customerName, amount){
-    return `Hello ${customerName}, Your total amount is `
+    return `Hello ${customerName}, Your total amount is ${amount}`
 }
 createInvoice("Vivek",1000)
+}
 
 
+{ // own block so names can be reused in each question
 // 25. Mini Challenge 
 // Given the student object: 
 // const student = { 
@@ -246,6 +261,7 @@ const average = total / copiedMarks.length;
 console.log(`Student: ${name}
 Total: ${total}
 Average: ${average}`);
+}
 
 
 
